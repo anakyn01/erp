@@ -34,7 +34,7 @@ const Member = () => {
     tel: "",
     address: "",
     detailAddress: "",
-    gender: "", // 초기값
+    gender: "", // 초기값 add
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -85,7 +85,7 @@ const Member = () => {
         async
       ></script>
 
-      <Card className="o-hidden border-0 shadow-lg my-5">
+      <Card className="o-hidden border-0 shadow-lg mt-150">
         <Card.Body className="p-0">
           <Row>
             <div className="col-lg-5 d-none d-lg-block bg-register-image"></div>
@@ -154,7 +154,7 @@ const Member = () => {
 
                   {/* 성별 추가 */}
                   <div className="form-group mb-2">
-                    <label className="mr-3">성별:</label>
+                    <label className="mr-3 form-label mx-2">성별 : </label>
                     <Form.Check
                       inline
                       type="radio"
@@ -214,18 +214,17 @@ const Member = () => {
                   </div>
 
                   <div className="form-group">
-                    <div className="d-flex">
+                    <div className="d-flex btn-group br50">
                       <Form.Control
                         type="text"
-                        className="form-control-user w-75"
+                        className="form-control w-75"
                         name="address"
                         value={formData.address}
                         readOnly
-                        style={{ flex: 1 }}
                       />
                       <button
                         onClick={handleAddressSearch}
-                        className="btn btn-outline-secondary"
+                        className="btn btn-secondary w-25"
                       >
                         주소검색
                       </button>
@@ -251,6 +250,19 @@ const Member = () => {
                   </Button>
                 </Form>
                 <hr />
+
+                                    <a href= "/" className="btn btn-google btn-user btn-block mb-2">
+                                        <i className="fab fa-google fa-fw">
+                                        
+                                        </i>Register with google
+                                    </a>
+
+                                    <a href= "/" className="btn btn-facebook btn-user btn-block mb-2">
+                                         <i className="fab fa-facebook-f fa-fw">
+                                        
+                                        </i>Register with facebook
+                                    </a>
+
                 <div className="text-center mb-2">
                   <a href="/forgot" className="small">
                     Forgot password?

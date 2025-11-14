@@ -9,14 +9,5 @@ import lombok.*;
 @Builder
 public class MemberRequestDTO {
 
-    private String firstName;
-    private String lastName;
-    private String email;
-    private String password;
-    private String companyName;
-    private String position;
-    private String tel;
-    private String address;
-    private String detailAddress;
-    private String gender; // 추가
+    private String firstName,lastName,email,password,companyName,position,tel,address,detailAddress,gender; // 추가
 }

@@ -1,6 +1,7 @@
 @use "./reset";
 @use"./bg" as bg;
 @use "./margin" as mg;
+@use "./btn";
 
 html{
     body{
@@ -14,26 +15,18 @@ html{
                 border-radius: 10rem !important ;
                 padding:.75rem 1rem !important;
                 }
-                .btn-user{
-                    font-size: .8rem; 
-                    border-radius: 10rem;
-                    padding:.75rem 1rem;
-                }
-                .btn-block{
-                display:block; width:100%;
-                }
-                .btn-google{
-                color:#fff; background-color: #ea4335 !important; 
 
-                }
-                .btn-facebook{
-                color:#fff; background-color: #3b5998 !important;
-                }
+              
             }
         }
     }
 
     .form-group{margin-bottom:1rem !important;}
+    .br50{border-radius: 50px !important; 
+        overflow: hidden !important; 
+        border:1px solid #ccc !important;
+        border-collapse:collapse !important;
+    }
 
 
 
