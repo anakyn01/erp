@@ -1,0 +1,115 @@
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Thin.woff2') format('woff2');
+    font-weight: 100;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-ExtraLight.woff2') format('woff2');
+    font-weight: 200;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-ExtraBold.woff2') format('woff2');
+    font-weight: 800;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Black.woff2') format('woff2');
+    font-weight: 900;
+    font-display: swap;
+}
+.fs-16{
+font-weight:400;
+font-size:16px; line-height: 28.5px;
+letter-spacing: -2%;
+margin-bottom: 0px !important;
+}
+.fs-17{
+font-weight:600;
+font-size:17px; line-height: 24px;
+letter-spacing: -2%;
+margin-bottom: 0px !important;
+}
+
+.fs-18{
+font-weight:600;
+font-size:18px; line-height: 24px;
+letter-spacing: -2%;
+margin-bottom: 0px !important;
+}
+.fs-14-gray{
+font-weight: 400; font-size: 14px; line-height: 22px;
+letter-spacing: -3%; color:#999;
+text-decoration: line-through;
+margin-bottom: 0px !important;
+}
+/*.fs-18{
+font-weight: 700; font-size: 18px; line-height: 32.5px;
+letter-spacing: -1%; color:#b7b7b7;
+}*/
+.fs-20{
+font-weight: 700; font-size: 20px; line-height: 32.5px;
+letter-spacing: -1%; color:#b7b7b7;
+}
+.fs-22{
+font-weight: 700; font-size: 22px; line-height: 32.5px;
+letter-spacing: -1%; color:#151515;
+}
+.fs-24{
+font-weight: 700; font-size: 24px; line-height: 32.5px;
+letter-spacing: -1%; color:#b7b7b7;
+}
+.fs-22-dc{
+font-weight: 700; font-size: 22px; line-height: 32.5px;
+letter-spacing: -1%; color:#ff6678;
+}
+.fs-13-mint{
+font-weight: 500; font-size: 13px; line-height: 22px;
+letter-spacing: 0; color:#48b2af;
+}
+.fs-22-mint{
+font-weight: 700; font-size: 22px; line-height: 32.5px;
+letter-spacing: -1%; color:#48b2af;
+}

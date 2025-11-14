@@ -1,0 +1,45 @@
+package port.sm.erp.entity;
+
+import javax.persistence.*;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Entity
+@Table(name = "member")
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+public class Member {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "member_seq_gen")
+    @SequenceGenerator(name = "member_seq_gen", sequenceName = "MEMBER_SEQ", allocationSize = 1)
+    @Column(name = "id")
+    private Long id;
+
+    @Column(name = "first_name")
+    private String firstName;
+
+    @Column(name = "last_name")
+    private String lastName;
+
+    private String email;
+
+    @Column(name = "company_name")
+    private String companyName;
+
+    private String position;
+
+    private String tel;
+
+    private String address;
+
+    @Column(name = "detail_address")
+    private String detailAddress;
+}

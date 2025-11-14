@@ -1,0 +1,119 @@
+$main-color: #48b2af;
+
+.basicBtn{
+  width:70px; height:24px; display:flex; justify-content: center; 
+  align-items:center;font-size:11px;line-height:16px;
+  letter-spacing: -1px;color:#41a09e; background-color: #f0f8f8;
+  padding: 4px 8px; border-radius: 5px;
+}
+.basicGray{
+  width:70px; height:24px; display:flex; justify-content: center; 
+  align-items:center;font-size:11px;line-height:16px;
+  letter-spacing: -1px;color:#848484; background-color: #f9f9f9;
+  padding: 4px 8px; border-radius: 5px;
+}
+.basicGray2{
+  width:70px; height:24px; display:flex; justify-content: center; 
+  align-items:center;font-size:11px;line-height:16px;
+  letter-spacing: -1px;color:#848484; background-color: #e7e7e7;
+  padding: 4px 8px; border-radius: 5px;
+}
+.basicGray3{
+  width:100%; height:56px; display:flex; justify-content: center; 
+  align-items:center;font-size:11px;line-height:16px;
+  letter-spacing: -1px;color:#848484; background-color: #e7e7e7;
+  padding: 4px 8px; border-radius: 5px;
+}
+.basicMint{
+background-color: $main-color;
+width:100%; height: 56px; display:flex; 
+justify-content: center; align-items: center;
+color:#fff; font-weight: 500;
+font-size: 16px; line-height: 25px;
+letter-spacing: -2%;
+border-radius: 15px;
+}
+.basicMintGrey{
+background-color: #f0f8f8;
+width:169px; height: 56px; display:flex; 
+justify-content: center; align-items: center;
+color:$main-color; font-weight: 500;
+font-size: 16px; line-height: 25px;
+letter-spacing: -2%;
+border-radius: 15px;  
+margin-right: 12px;
+}
+.basicMintSmall{
+background-color: $main-color;
+width:169px; height: 56px; display:flex; 
+justify-content: center; align-items: center;
+color:#fff; font-weight: 500;
+font-size: 16px; line-height: 25px;
+letter-spacing: -2%;
+border-radius: 15px;  
+}
+.kakao{
+background-color: #fee500;
+width:100%; height: 56px; display:flex; 
+justify-content: center; align-items: center;
+color:#000; font-weight: 600;
+font-size: 16px; line-height: 25px;
+letter-spacing: -2%;
+border-radius: 15px; 
+  span{
+    img{width:24px; margin-right:10px;}
+  }   
+}
+.google{
+background-color: #fff;
+width:100%; height: 56px; display:flex; 
+justify-content: center; align-items: center;
+color:#000; font-weight: 600;
+font-size: 16px; line-height: 25px;
+letter-spacing: -2%;
+border:1px solid #e7e7e7;
+border-radius: 15px;   
+  span{
+    img{width:24px; margin-right:10px;}
+  } 
+}
+
+.upBtn{
+width:110px; height: 32px; background-color: #000; opacity: .5; color: white;
+display: flex; justify-content: center; align-items: center; font-size: 12px;
+border-top-left-radius: 50px; 
+border-top-right-radius: 25px;
+border-bottom-right-radius: 25px;
+position: absolute;
+margin-top:-25px;
+span{
+  img{
+    width:16px; margin-right: 10px;
+  }
+}
+}
+
+.agreeBtn{
+width:335px; height:58px; display: flex; align-items: center; justify-content: center;
+font-size: 16px; color:#b7b7b7; background-color: #f8f8f8; border-radius: 16px;
+}
+
+.prevBtn{
+font-size:26px;
+color:#848484; text-decoration: none;
+margin-bottom: 8px;
+}
+
+.whiteBasic{
+width:100%; height:56px; 
+border:1px solid #e7e7e7; 
+display: flex; justify-content: center; 
+align-items: center; 
+font-size: 15px; font-weight: 500; line-height: 20px;
+letter-spacing: -3%;
+color:#525252;
+border-radius: 16px;
+}
+.kpay{
+width:52px; height:22px;
+}

@@ -1,0 +1,235 @@
+import { useState } from "react";
+import axios from "axios";
+import { Container, Row, Col, Button, Form, Card } from "react-bootstrap";
+
+interface FormData {
+  firstName: string;
+  lastName: string;
+  email: string;
+  password: string;
+  repeatPassword: string;
+  companyName: string;
+  position: string;
+  tel: string;
+  address: string;
+  detailAddress: string;
+}
+
+declare global {
+  interface window {
+    daum: any;
+  }
+}
+
+const Member = () => {
+  const [formData, setFormData] = useState<FormData>({
+    firstName: "",
+    lastName: "",
+    email: "",
+    password: "",
+    repeatPassword: "",
+    companyName: "",
+    position: "",
+    tel: "",
+    address: "",
+    detailAddress: "",
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleAddressSearch = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    if (!window.daum || !window.daum.Postcode) {
+      console.error("다음 주소 검색 api가 로드되지 않았습니다");
+      return;
+    }
+    new window.daum.Postcode({
+      oncomplete: (data: any) => {
+        setFormData((prev) => ({ ...prev, address: data.address }));
+      },
+    }).open();
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    if (formData.password !== formData.repeatPassword) {
+      alert("비밀번호와 확인이 일치하지 않습니다!");
+      return;
+    }
+
+    try {
+      // repeatPassword 제외하고 서버 전송
+      const { repeatPassword, ...payload } = formData;
+      await axios.post("http://localhost:8888/members", payload);
+      alert("회원가입이 완료되었습니다");
+      window.location.href = "http://localhost:5173/login";
+    } catch (err) {
+      console.error(err);
+      alert("회원가입 중 에러가 발생했습니다");
+    }
+  };
+
+  return (
+    <Container className="mt-5">
+      <script
+        src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"
+        async
+      ></script>
+
+      <Card className="o-hidden border-0 shadow-lg my-5">
+        <Card.Body className="p-0">
+          <Row>
+            <div className="col-lg-5 d-none d-lg-block bg-register-image"></div>
+            <div className="col-lg-7">
+              <div className="p-5">
+                <div className="text-center">
+                  <h1 className="h4 text-gray-900 mb-4">Create an Account!</h1>
+                </div>
+                <Form className="user" onSubmit={handleSubmit}>
+                  <div className="form-group row mb-2">
+                    <Col sm={6} className="mb-3 mb-sm-0">
+                      <Form.Control
+                        type="text"
+                        className="form-control-user"
+                        placeholder="이름"
+                        name="firstName"
+                        value={formData.firstName}
+                        onChange={handleChange}
+                      />
+                    </Col>
+                    <Col sm={6}>
+                      <Form.Control
+                        type="text"
+                        className="form-control-user"
+                        placeholder="성"
+                        name="lastName"
+                        value={formData.lastName}
+                        onChange={handleChange}
+                      />
+                    </Col>
+                  </div>
+
+                  <div className="form-group mb-2">
+                    <Form.Control
+                      type="email"
+                      className="form-control-user"
+                      placeholder="이메일"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                    />
+                  </div>
+
+                  <div className="form-group row mb-2">
+                    <Col sm={6} className="mb-3 mb-sm-0">
+                      <Form.Control
+                        type="password"
+                        className="form-control-user"
+                        placeholder="비밀번호"
+                        name="password"
+                        value={formData.password}
+                        onChange={handleChange}
+                      />
+                    </Col>
+                    <Col>
+                      <Form.Control
+                        type="password"
+                        className="form-control-user"
+                        placeholder="비밀번호 확인"
+                        name="repeatPassword"
+                        value={formData.repeatPassword}
+                        onChange={handleChange}
+                      />
+                    </Col>
+                  </div>
+
+                  <div className="form-group">
+                    <div className="d-flex justify-between">
+                      <Form.Control
+                        type="text"
+                        className="form-control-user"
+                        placeholder="회사명"
+                        name="companyName"
+                        value={formData.companyName}
+                        onChange={handleChange}
+                      />
+                      <Form.Control
+                        type="text"
+                        className="form-control-user mx-4"
+                        placeholder="직급"
+                        name="position"
+                        value={formData.position}
+                        onChange={handleChange}
+                      />
+                      <Form.Control
+                        type="text"
+                        className="form-control-user"
+                        placeholder="전화번호"
+                        name="tel"
+                        value={formData.tel}
+                        onChange={handleChange}
+                      />
+                    </div>
+                  </div>
+
+                  <div className="form-group">
+                    <div className="d-flex">
+                      <Form.Control
+                        type="text"
+                        className="form-control-user w-75"
+                        name="address"
+                        value={formData.address}
+                        readOnly
+                        style={{ flex: 1 }}
+                      />
+                      <button
+                        onClick={handleAddressSearch}
+                        className="btn btn-outline-secondary"
+                      >
+                        주소검색
+                      </button>
+                    </div>
+                    <div className="">
+                      <Form.Control
+                        type="text"
+                        className="form-control-user w-100 mt-3"
+                        placeholder="상세주소"
+                        name="detailAddress"
+                        value={formData.detailAddress}
+                        onChange={handleChange}
+                      />
+                    </div>
+                  </div>
+
+                  <Button
+                    type="submit"
+                    variant="primary"
+                    className="btn-user btn-block mb-2"
+                  >
+                    Register Account
+                  </Button>
+                </Form>
+                <hr />
+                <div className="text-center mb-2">
+                  <a href="/forgot" className="small">
+                    Forgot password?
+                  </a>
+                </div>
+                <div className="text-center">
+                  <a href="/login" className="small">
+                    Already have an account? Login!
+                  </a>
+                </div>
+              </div>
+            </div>
+          </Row>
+        </Card.Body>
+      </Card>
+    </Container>
+  );
+};
+
+export default Member;

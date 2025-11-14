@@ -1,0 +1,86 @@
+.mypage-wrap{ //위 좌우 하
+display: flex;
+justify-content: center; align-items: center;
+flex-direction: column;
+margin:92px 0 50px;
+height:100%;
+    .mypage-wrap-img{
+        width:62px; height:62px; border-radius: 50%;
+    }
+    .mypage-text-wrap{
+        margin-top:30px;
+        display: flex; justify-content: center; align-items: center;
+        flex-direction: column;
+        h3{font-weight: 700; font-size: 18px; line-height: 24px;
+        letter-spacing: -2%; color:#151515;
+        }
+        p{color:#848484; font-weight: 400; font-size: 15px; 
+            line-height: 23.5px; letter-spacing: -2%;}
+    }
+    .mypage-btn-wrap{
+        width:100%; padding:10px 20px 10px;
+    }
+    .mypage-content-wrap{
+    width:100%; padding:0px 20px 0px 20px;
+        div{
+           padding:6px 16px; //상하 좌우
+           .left{font-weight:500; font-size:16px; line-height: 28.5px; letter-spacing: -2%;}
+           .right{font-size: 16px; color:#b7b7b7;}
+        }
+    }
+    .mypage-regist-wrap{
+        margin-bottom: 10px;
+        div{
+            img{
+                width:72px; height:72px; border:1px solid #f8f8f8; border-radius: 5px;
+            }
+            div{
+                margin-left: 10px;
+                h5{font-weight:400; font-size: 12px; line-height: 16px; letter-spacing: -2%;
+                color:#848484; margin-bottom: 0px !important;
+                }
+                h3{font-weight: 600; font-size: 16px; line-height: 25px; letter-spacing: -2%;
+                color:#000; width:251px; margin-bottom: 0px !important;
+                }
+            }
+        }
+        .regist-bottom-box{
+        width:100%; background-color: #f9f9f9; padding: 12px; margin: 10px 0px;
+        border-radius: 5px; font-weight: 400; font-size: 13px; line-height: 19px;
+        letter-spacing: -2%; color:#525252;
+        display: flex; justify-content: center; align-items: center;
+            span{
+            color:#d4d4d4; padding:0px 5px;
+            }
+        }
+    }
+    .wangborder{
+        width: 100%;
+        height:8px;
+         background-color: #f9f9f9;
+         margin-bottom:10px;
+    }
+    .mypage-input-wrap{
+    width:100%;
+    padding:0px 20px;
+        div{
+            label{
+                font-size: 12px; line-height: 16px; letter-spacing: -2%;
+                color:#848484;
+            }
+            input{
+               height: 56px; 
+            }
+        }
+    }
+    .user-btn-wrap{
+width:100%; padding:10px 20px; 
+    }
+}
+
+.back-arrow2{
+font-size: 24px;
+padding-left:15px;
+color:#848484;
+margin-bottom: 5px;
+}
