@@ -1,11 +1,10 @@
 package port.sm.erp.entity;
 
 import javax.persistence.*;
-
 import lombok.*;
 
 @Entity
-@Table(name = "MEMBERS") // Oracle에서는 member 사용 권장 X
+@Table(name = "MEMBERS") // Oracle에서는 MEMBER보다는 복수형 권장
 @Getter
 @Setter
 @NoArgsConstructor
@@ -13,9 +12,9 @@ import lombok.*;
 @Builder
 public class Member {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "member_seq_gen")
-    @SequenceGenerator(name = "member_seq_gen", sequenceName = "SEQ_MEMBERS", allocationSize = 1)
+	@Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "member_seq")
+    @SequenceGenerator(name = "member_seq", sequenceName = "MEMBER_SEQ", allocationSize = 1)
     @Column(name = "MEMBER_ID")
     private Long id;
 
@@ -39,6 +38,9 @@ public class Member {
 
     @Column(name = "TEL")
     private String tel;
+
+    @Column(name = "GENDER", nullable = false)
+    private String gender; // 추가
 
     @Column(name = "ADDRESS")
     private String address;

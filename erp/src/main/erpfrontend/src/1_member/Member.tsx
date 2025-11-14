@@ -13,6 +13,7 @@ interface FormData {
   tel: string;
   address: string;
   detailAddress: string;
+  gender: string; // 추가
 }
 
 declare global {
@@ -33,6 +34,7 @@ const Member = () => {
     tel: "",
     address: "",
     detailAddress: "",
+    gender: "", // 초기값
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -60,8 +62,12 @@ const Member = () => {
       return;
     }
 
+    if (!formData.gender) {
+      alert("성별을 선택해주세요!");
+      return;
+    }
+
     try {
-      // repeatPassword 제외하고 서버 전송
       const { repeatPassword, ...payload } = formData;
       await axios.post("http://localhost:8888/members", payload);
       alert("회원가입이 완료되었습니다");
@@ -144,6 +150,38 @@ const Member = () => {
                         onChange={handleChange}
                       />
                     </Col>
+                  </div>
+
+                  {/* 성별 추가 */}
+                  <div className="form-group mb-2">
+                    <label className="mr-3">성별:</label>
+                    <Form.Check
+                      inline
+                      type="radio"
+                      label="남성"
+                      name="gender"
+                      value="male"
+                      checked={formData.gender === "male"}
+                      onChange={handleChange}
+                    />
+                    <Form.Check
+                      inline
+                      type="radio"
+                      label="여성"
+                      name="gender"
+                      value="female"
+                      checked={formData.gender === "female"}
+                      onChange={handleChange}
+                    />
+                    <Form.Check
+                      inline
+                      type="radio"
+                      label="기타"
+                      name="gender"
+                      value="other"
+                      checked={formData.gender === "other"}
+                      onChange={handleChange}
+                    />
                   </div>
 
                   <div className="form-group">
