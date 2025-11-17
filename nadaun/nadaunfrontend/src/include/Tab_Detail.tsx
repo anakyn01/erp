@@ -1,5 +1,7 @@
 import { useState } from "react";
 import Detail_Content from "../00_contents/Detail_Content";
+import Exp from "../00_contents/Exp";
+import Gus from "../00_contents/Gus";
 
 
 const Tab_Detail = () => {
@@ -26,7 +28,7 @@ const Tab_Detail = () => {
         return(
         <>
         <div className="tab-content">
-          🔍 심화 해석판 내용입니다.
+        <Exp/>
         </div>
         </>
         ); 
@@ -34,7 +36,7 @@ const Tab_Detail = () => {
         return (
           <>
           <div className="tab-content">
-            💡 무료 해석판 내용입니다.
+          <Gus/>
           </div>
           </>
         );

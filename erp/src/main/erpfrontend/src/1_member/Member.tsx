@@ -2,6 +2,22 @@ import { useState } from "react";
 import axios from "axios";
 import { Container, Row, Col, Button, Form, Card } from "react-bootstrap";
 
+const INSTAGRAM_CLIENT_ID = "YOUR_INSTAGRAM_CLIENT_ID";
+const INSTAGRAM_REDIRECT_URI = "http://localhost:5174/auth/instagram";
+
+const KAKAO_CLIENT_ID = "YOUR_INSTAGRAM_CLIENT_ID";
+const KAKAO_REDIRECT_URI = "http://localhost:5174/auth/kakao";
+
+const handleInstargramLogin = () => {
+const url=`https://api.instagram.com/oauth/authorize?client_id=${INSTAGRAM_CLIENT_ID}&redirect_uri=${INSTAGRAM_REDIRECT_URI}&scope=user_profile,user_media&response_type=code`;
+window.location.href=url;
+}
+
+const handleKakaoLogin = () => {
+const url=`https://kauth.kakao.com/oauth/authorize?client_id=${KAKAO_CLIENT_ID}&redirect_uri=${KAKAO_REDIRECT_URI}&response_type=code`;
+window.location.href=url;
+}
+
 interface FormData {
   firstName: string;
   lastName: string;
@@ -251,17 +267,23 @@ const Member = () => {
                 </Form>
                 <hr />
 
-                                    <a href= "/" className="btn btn-google btn-user btn-block mb-2">
-                                        <i className="fab fa-google fa-fw">
-                                        
-                                        </i>Register with google
-                                    </a>
+<a href= "/" 
+className="btn btn-google btn-user btn-block mb-2"
+onClick={handleInstargramLogin}
+>
+    <i className="">
+    
+    </i>Register with Insta
+</a>
 
-                                    <a href= "/" className="btn btn-facebook btn-user btn-block mb-2">
-                                         <i className="fab fa-facebook-f fa-fw">
-                                        
-                                        </i>Register with facebook
-                                    </a>
+<a href= "/" 
+className="btn btn-facebook btn-user btn-block mb-2"
+onClick={handleInstargramLogin}
+>
+      <i className="">
+    
+    </i>Register with Kakao
+</a>
 
                 <div className="text-center mb-2">
                   <a href="/forgot" className="small">

@@ -24,6 +24,14 @@ import Google from './03_login/Google';
 
 import Dc from './04_paid/Dc';
 import PaidDetail from './04_paid/PaidDetail';
+import PaidInput from './04_paid/PaidInput';
+import PaidInputMan from './04_paid/PaidInputMan';
+import Duplex from './04_paid/Duplex';
+import DuplexEnd from './04_paid/DuplexEnd';
+import Tran1 from './04_paid/Tran1';
+import Tran2 from './04_paid/Tran2';
+import Tran3 from './04_paid/Tran3';
+import Select from './04_paid/Select';
 
 import Loading from './05_free/Loading';
 import Detail from './05_free/Detail';
@@ -31,6 +39,8 @@ import Detail from './05_free/Detail';
 import Notenter from './06_profile/Notenter';
 import Regist from './06_profile/Regist';
 import UserInput from './06_profile/UserInput';
+
+
 
 function App() {
  
@@ -65,6 +75,15 @@ function App() {
 
         <Route path="/dc" element={<Dc/>} />
         <Route path="/dt" element={<PaidDetail/>} />
+        <Route path="/pi" element={<PaidInput/>} />
+        <Route path="/pim" element={<PaidInputMan/>} />
+        <Route path="/dup" element={<Duplex/>} />
+        <Route path="/tran1" element={<Tran1/>} />
+        <Route path="/tran2" element={<Tran2/>} />
+        <Route path="/tran3" element={<Tran3/>} />
+        <Route path="/dupe" element={<DuplexEnd/>} />
+        <Route path="/select" element={<Select/>} />
+
 
         <Route path="/loading" element={<Loading/>} />
         <Route path="/detail" element={<Detail/>} />

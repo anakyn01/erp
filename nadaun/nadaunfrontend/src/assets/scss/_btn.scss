@@ -35,7 +35,27 @@ border-radius: 15px;
 }
 .basicMintGrey{
 background-color: #f0f8f8;
-width:169px; height: 56px; display:flex; 
+width:100%; height: 56px; display:flex; 
+justify-content: center; align-items: center;
+color:$main-color; font-weight: 500;
+font-size: 16px; line-height: 25px;
+letter-spacing: -2%;
+border-radius: 15px;  
+margin-right: 12px;
+}
+.basicGray100{
+background-color: #f8f8f8;
+width:100%; height: 56px; display:flex; 
+justify-content: center; align-items: center;
+color:#b7b7b7; font-weight: 500;
+font-size: 16px; line-height: 25px;
+letter-spacing: -2%;
+border-radius: 15px;  
+margin-right: 12px;
+}
+.basicMintGray{
+background-color: #f0f8f8;
+width:100%; height: 56px; display:flex; 
 justify-content: center; align-items: center;
 color:$main-color; font-weight: 500;
 font-size: 16px; line-height: 25px;
