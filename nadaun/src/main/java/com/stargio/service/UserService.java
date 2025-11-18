@@ -2,9 +2,13 @@ package com.stargio.service;
 
 import java.util.Optional;
 
+import org.springframework.stereotype.Service;
+
 import com.stargio.entity.User;
 import com.stargio.repository.UserRepository;
 
+
+@Service
 public class UserService {
 	
 	private final UserRepository repo;

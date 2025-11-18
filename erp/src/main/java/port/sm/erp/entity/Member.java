@@ -53,4 +53,20 @@ public class Member {
 
     @Column(name = "UPDATED_AT", insertable = false, updatable = false)
     private java.sql.Date updatedAt;
+    
+    //추가
+    @Column(name = "PROVIDER")
+    private String provider;
+    
+    @Column(name = "PROVIDER_ID")
+    private String providerId;
+    
+    @Column(name = "USERNAME")
+    private String username;
+    
+    
+    
+    
+
+
 }

@@ -27,6 +27,7 @@ public class User {
 	@Column(nullable = false, unique = true)
 	private String email;
 	
-	private String provider;
+    private String provider;      // google / kakao / naver
+    private String providerId;    // 플랫폼 고유ID (선택)
 
 }
