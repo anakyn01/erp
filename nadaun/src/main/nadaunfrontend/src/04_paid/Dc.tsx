@@ -28,6 +28,7 @@ const Dc = () => {
                 </div>
             </div>
 
+
             <div className="paid-msg">
                 <span>
                 <img src="/svg/paid/raiders.png" alt="" />

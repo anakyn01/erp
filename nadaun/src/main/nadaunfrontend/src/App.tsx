@@ -48,8 +48,7 @@ import Out from './06_profile/Out';
 import ProfileSelect from './06_profile/Select';
 import PayComp from './06_profile/PayComp';
 
-
-
+import OAuth2Callback from './03_login/OAuth2Callback';
 
 
 function App() {
@@ -63,6 +62,7 @@ function App() {
       {/* Routes */}
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/oauth2/callback" element={<OAuth2Callback />} />
         <Route path="/fortune" element={<Fortune />} />
         <Route path="/romantic" element={<Romantc />} />
         <Route path="/parting" element={<Parting />} />

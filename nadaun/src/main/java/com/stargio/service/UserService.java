@@ -21,7 +21,7 @@ public class UserService {
         Optional<User> found = repo.findByEmail(email);
         if (found.isPresent()) {
             return found.get();
-        }
+        } 
         User newUser = User.builder()
                 .email(email)
                 .provider(provider)

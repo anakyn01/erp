@@ -34,7 +34,7 @@ public class OAuth2SuccessHandler implements AuthenticationSuccessHandler {
         String token = tokenProvider.createToken(email);
 
         // 프론트로 Redirect (token 전달)
-        String redirectUrl = "http://localhost:3000/oauth2/callback?token=" + token;
+        String redirectUrl = "http://localhost:5173/oauth2/callback?token=" + token;
 
         response.sendRedirect(redirectUrl);
     }
