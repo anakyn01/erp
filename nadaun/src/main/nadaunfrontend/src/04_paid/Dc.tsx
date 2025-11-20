@@ -1,6 +1,6 @@
 
 import FooterBtn from "../include/FooterBtn";
-import HpTop2 from "../include/HpTop2";
+import PriceHeader from "../include/PriceHeader";
 
 
 const Dc = () => {
@@ -8,14 +8,7 @@ const Dc = () => {
 <>
    <div className="Min390Max">
     
-        <div className="headerSet">
-            <HpTop2 />
-            <header className="">
-                <a href="/">&lt;</a>
-                <h3>결제</h3>
-                <div></div>
-            </header>        
-        </div>
+<PriceHeader/>
 
         <div className="paid-wrap mt-95">
 

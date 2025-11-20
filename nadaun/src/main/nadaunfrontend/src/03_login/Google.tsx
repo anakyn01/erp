@@ -1,19 +1,14 @@
 
-import HpTop2 from "../include/HpTop2";
+
+import BackHeader from "../include/BackHeader";
+
 
 
 const Google = () => {
     return(
 <>
   <div className="Min390Max">
-  <HpTop2/>
-
-  <div className="back-wrap">
-    <a href="/" className="back-arrow">
-      &lt;
-    </a>
-  </div>
-
+<BackHeader/>
   <div className="kakao-wrap">
     <div className="kakao-text-wrap">
       <h2>이미 가입하신 계정이 있어요</h2>

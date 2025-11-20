@@ -1,3 +1,6 @@
+import LeftArrow from "../08_svg/LeftArrow";
+import RightArrow from "../08_svg/RightArrow";
+
 const InnerFooter=()=> {
     return(
 <>
@@ -7,9 +10,9 @@ const InnerFooter=()=> {
         <div className="">03/10</div>
     </div>
     <div className="d-flex down">
-        <div className="">&lt;&nbsp;이전</div>
-        <div className="">&nbsp;|&nbsp;</div>
-        <div className="">다음&nbsp;&gt;</div>
+        <div className=""><span className="mx-2"><LeftArrow/></span>이전</div>
+        <div className="mx-3">&nbsp;|&nbsp;</div>
+        <div className=""><span className="mx-2">다음</span><RightArrow/></div>
     </div>
 </div>
 </>

@@ -1,3 +1,4 @@
+import BackArrowImg from "../08_svg/BackArrowImg";
 import HpTop2 from "./HpTop2";
 
 const SelectHeader = () => {
@@ -6,10 +7,11 @@ const SelectHeader = () => {
         <div className="detail-header">
             <HpTop2 />
             <header className="">
-                <a href="/">&lt;</a>
+                <a href="/">
+                <BackArrowImg/>
+                </a>
                 <h3>사주 정보 선택</h3>
-                <div>
-                    
+                <div>                    
                 </div>
             </header>        
         </div>

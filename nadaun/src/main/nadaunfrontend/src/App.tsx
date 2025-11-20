@@ -33,8 +33,8 @@ import PaidInputMan from './04_paid/PaidInputMan';
 import Duplex from './04_paid/Duplex';
 import DuplexEnd from './04_paid/DuplexEnd';
 import Tran1 from './04_paid/Tran1';
-import Tran2 from './04_paid/Tran2';
-import Tran3 from './04_paid/Tran3';
+import Tran2 from './04_paid/Tran3';
+import Tran3 from './04_paid/Tran2';
 import Select from './04_paid/Select';
 
 import Loading from './05_free/Loading';

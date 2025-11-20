@@ -2,6 +2,8 @@
 @use "./margin.scss";
 
 @use "./btn.scss";
+@use "./detail.scss";
+
 @use './profile.scss';
 @use './paid.scss';
 @use './service.scss';
@@ -12,6 +14,7 @@
 
 @use './font.scss';
 @use './modal.scss';
+
 
 $main-color: #48b2af;
 
@@ -441,4 +444,7 @@ padding: 0px 10px;
 .pointer {
   cursor: pointer;
 }
-
+p{
+margin-bottom:0px !important;
+}
+a{text-decoration: none !important;}

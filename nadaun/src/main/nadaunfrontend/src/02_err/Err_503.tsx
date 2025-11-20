@@ -1,6 +1,6 @@
 
 import HpTop2 from "../include/HpTop2";
-
+import Err503Img from "../08_svg/Err503Img";
 
 const Err_503 = () => {
     return(
@@ -10,7 +10,7 @@ const Err_503 = () => {
   <div className="err404-wrap">
     <div className="err404">
         <div className="err404-img">
-            <img src="/svg/err/503.png" alt="" />
+            <Err503Img/>
         </div>
         <div className="err404-textwrap">
             <h1>서버에 잠시 과부하 상태에요</h1>
@@ -24,8 +24,8 @@ const Err_503 = () => {
 
   <div className="btn-wrap">
     <div className="d-flex space-between">
-        <button className="basicMintGrey">홈으로 가기</button>
-        <button className="basicMintSmall">다시 시도하기</button>
+        <a className="basicMintGray" href="/">홈으로 가기</a>
+        <button className="basicMint">다시 시도하기</button>
     </div>
   </div>
 

@@ -1,9 +1,6 @@
 import Footer from "../include/Footer";
-import ExitHeader from "../include/ExiyHeader";
+import ExitHeader from "../include/ExitHeader";
 import InnerFooter from "../include/InnerFooter";
-
-
-
 
 const Tran1 = () => {
     return(
@@ -11,7 +8,7 @@ const Tran1 = () => {
 
 <div className="Min390Max"> 
         <ExitHeader/>
-<div className="title-wrap mt-80">
+<div className="title-wrap mt-100">
 <h5>우리관계, 지금이 전환점일까?</h5>
 <p>질문을 떠올리며 카드를 뽑아주세요</p>
 </div>

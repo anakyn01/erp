@@ -1,7 +1,9 @@
+import PhoneTop from "../08_svg/PhoneTop";
+
 const HpTop2 = () => {
     return(
 <>
-<img src="/svg/top.png" className="hptop2"/>
+<PhoneTop/>
 </>
     )
 }

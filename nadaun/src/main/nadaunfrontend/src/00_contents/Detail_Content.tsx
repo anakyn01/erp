@@ -1,4 +1,7 @@
 import { useState } from "react";
+import DownArrow from "../08_svg/DownArrow";
+import TopArrow from "../08_svg/TopArrow";
+import RightArrow from "../08_svg/RightArrow";
 
 const Detail_Content: React.FC = () => {
 
@@ -42,7 +45,7 @@ const Detail_Content: React.FC = () => {
                         <img src="/svg/paid/boon.png" alt="" className="boon" />
                     </span>
                     <p className="paid-msg-inner">
-                        첫 구매 쿠폰 받고 <span className="mx-2">0원으로</span>풀이보기 &nbsp;&gt;
+                        첫 구매 쿠폰 받고 <span className="mx-2">0원으로</span>풀이보기 &nbsp;<RightArrow/>
                     </p>
                 </div>
             </div>
@@ -69,7 +72,9 @@ const Detail_Content: React.FC = () => {
                         className="whiteBasic"
                         onClick={() => setShowDetail(true)}
                     >
-                        자세히 보기 <span className="fs-18 mx-2">∨</span>
+                        자세히 보기 <span className="fs-18 mx-2">
+                            <DownArrow/>
+                        </span>
                     </button>
                 )}
 
@@ -183,7 +188,7 @@ const Detail_Content: React.FC = () => {
                     onClick={() => toggleAccordion("guide")}
                 >
                     <div className="fs-16">이용안내</div>
-                    <div className="fs-18">{openAccordion === "guide" ? "▲" : "∨"}</div>
+                    <div className="fs-18">{openAccordion === "guide" ? <TopArrow/> : <DownArrow/>}</div>
                 </div>
                 {openAccordion === "guide" && (
                     <div className="accordion-content">
@@ -208,7 +213,7 @@ const Detail_Content: React.FC = () => {
                     onClick={() => toggleAccordion("refund")}
                 >
                     <div className="fs-16">환불규정</div>
-                    <div className="fs-18">{openAccordion === "refund" ? "▲" : "∨"}</div>
+                    <div className="fs-18">{openAccordion === "refund" ? <TopArrow/> : <DownArrow/>}</div>
                 </div>
 
                 {openAccordion === "refund" && (

@@ -170,7 +170,7 @@ const Agree: React.FC = () => {
         </div>
 
         <div className="agree-btn-wrap">
-          <button className="agreeBtn">다음 단계로 이동하기</button>
+          <a className="agreeBtn" href="/comp">다음 단계로 이동하기</a>
         </div>
       </div>
     </>

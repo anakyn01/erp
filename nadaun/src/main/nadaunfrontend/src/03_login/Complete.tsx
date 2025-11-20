@@ -1,5 +1,6 @@
 
 import HpTop2 from "../include/HpTop2";
+import CompImg from "../08_svg/CompImg";
 
 
 const Complete = () => {
@@ -9,7 +10,7 @@ const Complete = () => {
   <HpTop2/>
   <div className="complete-wrap">
     <div className="complete-img-wrap">
-      <img src="/svg/login/cong.png" alt="" />
+      <CompImg/>
     </div>
     <div className="complete-text-wrap">
       <h1>가입 축하 쿠폰이 도착했어요</h1>

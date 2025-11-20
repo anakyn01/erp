@@ -1,6 +1,6 @@
 
 import HpTop2 from "../include/HpTop2";
-
+import NoInterImg from "../08_svg/NoInterImg";
 
 const NoInter = () => {
     return(
@@ -10,7 +10,7 @@ const NoInter = () => {
   <div className="err404-wrap">
     <div className="err404">
         <div className="err404-img">
-            <img src="/svg/err/nointer.png" alt="" />
+           <NoInterImg/>
         </div>
         <div className="err404-textwrap">
             <h1>인터넷 연결이 불안정해요</h1>
@@ -24,8 +24,8 @@ const NoInter = () => {
 
   <div className="btn-wrap">
     <div className="d-flex space-between">
-        <button className="basicMintGrey">홈으로 가기</button>
-        <button className="basicMintSmall">다시 시도하기</button>
+        <a className="basicMintGray" href="/">홈으로 가기</a>
+        <button className="basicMint">다시 시도하기</button>
     </div>
   </div>
 

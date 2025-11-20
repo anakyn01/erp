@@ -1,4 +1,5 @@
 
+import Err404Img from "../08_svg/Err404Img";
 import HpTop2 from "../include/HpTop2";
 
 
@@ -10,7 +11,7 @@ const Err_404 = () => {
   <div className="err404-wrap">
     <div className="err404">
         <div className="err404-img">
-            <img src="/svg/err/404.png" alt="" />
+            <Err404Img/>
         </div>
         <div className="err404-textwrap">
             <h1>페이지를 찾을 수 없어요</h1>
@@ -22,7 +23,7 @@ const Err_404 = () => {
   </div>
 
   <div className="btn-wrap">
-    <button className="basicMint">홈으로 가기</button>
+    <a className="basicMint" href="/">홈으로 가기</a>
   </div>
 
   
