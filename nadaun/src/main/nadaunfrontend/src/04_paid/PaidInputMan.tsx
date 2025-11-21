@@ -10,7 +10,7 @@ const PaidInputMan = () => {
 
    <div className="Min390Max"> 
         <NomalHeader/>
-<div className="input-wrap mt-80">
+<div className="input-wrap mt-90">
     <div className="">
         <label htmlFor="">이름</label>
         <input type="text" placeholder="예:홍길동"/>
@@ -20,12 +20,13 @@ const PaidInputMan = () => {
 <div className="input-wrap">
     <div className="input-wrap-check">
         <div className="edit">
-            <label htmlFor="">여성</label>
-            <input type="checkbox"/>
+            
+            <input type="checkbox" id="female" defaultChecked/>
+            <label htmlFor="female">여성</label>
         </div>
-        <div className="edit">
-            <label htmlFor="">남성</label>
-            <input type="checkbox"/>
+        <div className="edit">           
+            <input type="checkbox"  id="male"/>
+            <label htmlFor="male">남성</label>
         </div>
     </div>
 </div>
@@ -41,7 +42,7 @@ const PaidInputMan = () => {
         <label htmlFor="">태어난 시간</label>
     <div className="d-flex align-items-center justify-content-between">
         <input type="text" placeholder="예:1992-07-15(양력)" className="date"/>
-        <span>모르겠어요</span>
+        <span className="paid-fs-15">모르겠어요</span>
         <input type="checkbox" className="check"/>
     </div>
 </div>

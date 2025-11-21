@@ -1,6 +1,7 @@
 
 import HpTop2 from "../include/HpTop2";
 import Footer from "../include/Footer";
+import BackArrowImg from "../08_svg/BackArrowImg";
 
 
 const Out = () => {
@@ -10,7 +11,7 @@ const Out = () => {
     <div className="position-fixed bg-white nav-wrap">
         <HpTop2 />
         <header className="d-flex justfify-content-around p20 align-items-center load-wrap ">
-            <div className="w-25 back-arrow2">&lt;</div>
+            <div className="w-25 back-arrow2"><BackArrowImg/></div>
             <h3 className="w-50 text-center">회원탈퇴</h3>
             <div className="w-25 d-flex justify-content-end"></div>
         </header>
@@ -44,7 +45,7 @@ const Out = () => {
 </div>
         
         <div className="d-flex justify-content-between align-items-center out-agree">
-            <input type="checkbox" />
+            <input type="checkbox" className="check"/>
             <p>안내 내용을 모두 확인하였으며, 이에 동의합니다.</p>
         </div>
 

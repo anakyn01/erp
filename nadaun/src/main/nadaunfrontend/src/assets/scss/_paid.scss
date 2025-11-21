@@ -134,6 +134,7 @@ margin:76px 0px 0px
 
 /*상세페이지*/
 .detail-header{
+    z-index:9999999;
     box-sizing: border-box !important;
     position: fixed; top:0;
     background-color: white;
@@ -605,6 +606,32 @@ background-color: #41A09E !important;
     .left{h5{font-size: 15px;}}
     .right{width:24px; height: 24px; display: flex; align-items: center; justify-content: center;
     input{width:20px; height:20px;}
+    }
+}
+
+.paidcomp-wrap{
+    width:100%; padding:10px 20px;
+    h5{font-weight:600; font-size:17px; line-height:24px;
+    letter-spacing:-2%;
+    }
+    .paid-price{
+        justify-content: space-between !important;
+        .left{
+            width:80px; height:54px;
+            img{border-radius:12px;}
+        }
+        .right{
+        h3{font-weight:500; font-size:14px; line-height:22px; letter-spacing: -3%;
+        color:#000; margin-bottom: 0px !important;
+        }
+        p{font-weight:400; font-size:12px; line-height:16px; letter-spacing: -2%;
+        color:#848484;
+        }
+        button{
+        width:100%; background-color:white; border-radius:1px solid gray !important;  
+        color:#525252; font-size:14px; line-height:20px; letter-spacing: -3%;
+        }
+        }
     }
 }
 

@@ -1,4 +1,6 @@
 
+import BackArrowImg from "../08_svg/BackArrowImg";
+import RightArrow from "../08_svg/RightArrow";
 import HpTop2 from "../include/HpTop2";
 
 
@@ -9,7 +11,7 @@ const UserInput = () => {
     <div className="position-fixed bg-white nav-wrap">
         <HpTop2 />
         <header className="d-flex justfify-content-around p20 align-items-center load-wrap ">
-            <div className="w-25 back-arrow2">&lt;</div>
+            <div className="w-25 back-arrow2"><BackArrowImg/></div>
             <h3 className="w-50 text-center">사주정보입력</h3>
             <div className="w-25 d-flex justify-content-end"></div>
         </header>
@@ -23,16 +25,19 @@ const UserInput = () => {
             </div>
         </div>
 
-        <div className="mypage-input-wrap mt-5">
-            <div className="">
-                <label htmlFor="" className="form-label">성별</label>
-                <div className="d-flex">
-                <input type="checkbox" className="form-check"/><label htmlFor="" className="form-label">여성</label>
-                <input type="checkbox" className="form-check"/><label htmlFor="" className="form-label">남성</label>
-                </div>
-
-            </div>
+<div className="input-wrap mt-3">
+    <div className="input-wrap-check">
+        <div className="edit">
+            
+            <input type="checkbox" id="female" defaultChecked/>
+            <label htmlFor="female">여성</label>
         </div>
+        <div className="edit">           
+            <input type="checkbox"  id="male"/>
+            <label htmlFor="male">남성</label>
+        </div>
+    </div>
+</div>
 
         <div className="mypage-input-wrap mt-5">
             <div className="">
@@ -42,26 +47,29 @@ const UserInput = () => {
         </div>
 
         <div className="mypage-input-wrap mt-5">
-            <div className="">
-                <label htmlFor="" className="form-label">태어난시간</label>
-                <div className="d-flex justify-content-between">
-                <input type="text" className="form-control w-50" placeholder="예 1992-07-15(양력)"/>
-                <div className="d-flex align-items-center">
-                <span className="mx-2">모르겠어요</span><input type="checkbox" className="form-check"/>
-                </div>
-                </div>
+            <label htmlFor="">태어난 시간</label>
+            <div className="d-flex align-items-center justify-content-between">
+    <input type="text" placeholder="예:1992-07-15(양력)" className="date input-bg-gray"/>
+    <span className="paid-fs-15" >모르겠어요</span>
+                <input type="checkbox" className="check"/>
             </div>
-
-            <div className="d-flex justify-content-start mt-2">
-                <a href="">탈퇴하기 &gt;</a>
-            </div> 
         </div>
 
+
+        </div>
+
+
+        
+
+
  <div className="user-btn-wrap">
+    <div className="">
+        <a href="">탈퇴하기<span><RightArrow/></span></a>
+    </div>
     <button className="basicGray3">저장하기</button>
  </div>
     </div>
-    </div>
+
 </>
     );  
 }
